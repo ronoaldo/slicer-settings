@@ -1,0 +1,26 @@
+#!/bin/bash
+
+stl="$1"
+z="$2"
+
+if [ $# -lt 2 ] ; then
+	echo "Usage $0 STL Z-height"
+	exit 5
+fi
+if [ x"$stl" = x"" ] ; then
+	echo "STL file is required"
+	exit 1
+fi
+if [ x"$z" = x"" ] ; then
+	echo "Inform Z height to pause before"
+	exit 2
+fi
+
+if grep -q "before_z:${z}$" "$stl" ; then
+	sed -i -e "s/before_z:${z}$/before_z:${z}\nM25 ; pause before ${z}/" "$stl"
+	echo "Current pauses"
+	grep -n -B 1 "^M25" "$stl"
+else
+	echo "Layer not found (before_z:${z})"
+	exit 3
+fi
