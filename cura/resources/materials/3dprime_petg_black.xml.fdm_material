@@ -18,8 +18,8 @@
     <diameter>1.75</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">230.0</setting>
-    <setting key="print cooling">100.0</setting>
+    <setting key="print temperature">225.0</setting>
+    <setting key="print cooling">0.0</setting>
     <setting key="standby temperature">120.0</setting>
     <setting key="heated bed temperature">70.0</setting>
     <setting key="retraction amount">8.0</setting>

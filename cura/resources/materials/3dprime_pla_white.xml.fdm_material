@@ -18,7 +18,7 @@
     <diameter>1.75</diameter>
   </properties>
   <settings>
-    <setting key="print temperature">200.0</setting>
+    <setting key="print temperature">195.0</setting>
     <setting key="print cooling">100.0</setting>
     <setting key="surface energy">100</setting>
     <setting key="build volume temperature">28</setting>
